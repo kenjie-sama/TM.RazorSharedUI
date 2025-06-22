@@ -1,0 +1,25 @@
+﻿@using TM.RazorSharedUI.Models.ViewModels
+
+@model SelectViewModel
+
+<div class="col @Model.ClassName">
+	@if (Model.IsLabelVisible)
+	{
+		<label for='@Model.Id' class='form-label fs-5 fw-bold'>@Model.Title</label>
+	}
+
+	<div class="@Model.InputContainerClassName ">
+		<select class="form-control " name="@Model.Name" id="@Model.Id">
+			@if (Model.Options != null && Model.Options.Any())
+			{
+				@foreach (var option in Model.Options)
+				{
+					<option value="@option.Value">
+						@option.Label
+					</option>
+				}
+			}
+		</select>
+	</div>
+	<span id='@Model.NotifId' class="text-danger text-sm"></span>
+</div>
