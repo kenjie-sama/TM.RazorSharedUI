@@ -22,8 +22,7 @@
 		</div>
 	</div>
 
-	<div id="@Model.Id" class="row m-0 bg-gray-100 rounded-3" style="display: none;">
-
+	<div id="@Model.Id" class="@Model.ClassName" style="display: none;">
 		@if (Model.RadioGroupButtons != null && Model.RadioGroupButtons.Any())
 		{
 			@foreach (var button in Model.RadioGroupButtons)
