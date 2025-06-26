@@ -1,0 +1,26 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using TM.RazorSharedUI.Constants;
+using TM.RazorSharedUI.Enums;
+using TM.RazorSharedUI.Models.Interfaces;
+
+namespace TM.RazorSharedUI.Models.ViewModels
+{
+  public class DateFieldViewModel : BaseElementViewModel, IInputElement
+  {
+    public bool IsCompact { get; set; } = false;
+    public bool IsDisabled { get; set; } = false;
+
+    public string? Value { get; set; }
+    public string? InputContainerClassName { get; set; }
+    public string? InputClassName { get; set; }
+
+    public override string GetPartialViewPath() => Routes.Inputs.DATE;
+
+    public string Min { get; set; } = string.Empty;
+    public string Max { get; set; } = string.Empty;
+  }
+}
