@@ -1,0 +1,20 @@
+﻿@using TM.RazorSharedUI.Models.ViewModels
+@model ButtonViewModel
+
+@{
+}
+
+<div class="@Model.ClassName">
+  @if (Model.IsDisabled)
+  {
+  <button id='@Model.Id' name='@Model.Name' class='@Model.InputClassName' placeholder='@Model.PlaceHolder' disabled>
+    @Model.Title
+    </button>
+  }
+  else
+  {
+    <button id='@Model.Id' onclick="@Html.Raw(Model.OnClickJavascript)" name='@Model.Name' class='@Model.InputClassName' placeholder='@Model.PlaceHolder'>
+      @Model.Title
+    </button>
+  }
+</div>

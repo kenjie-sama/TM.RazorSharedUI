@@ -15,6 +15,7 @@ namespace TM.RazorSharedUI.Constants
       public const string CHECKBOX = @"../Shared/Inputs/_CheckBoxPartial";
       public const string SELECT = @"../Shared/Inputs/_SelectPartial";
       public const string RADIO_GROUP = @"../Shared/Inputs/_RadioGroupPartial";
+      public const string BUTTON = @"../Shared/Inputs/_ButtonPartial";
     }
   }
 }

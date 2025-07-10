@@ -12,7 +12,9 @@ namespace TM.RazorSharedUI.Models.ViewModels
 		public string Title { get; set; }
 		public string? ClassName { get; set; }
 		public bool IsLabelVisible { get; set; } = true;
-		public string? AspName { get; set; } = "";
+    public bool IsDisabled { get; set; } = false;
+
+    public string? AspName { get; set; } = "";
 
     public virtual string Id => $"txt-{OperationName}-{IdName}";
 		public virtual string Name => string.IsNullOrEmpty(AspName) ? $"txt_{OperationName}_{IdName}" : AspName;
